@@ -45,9 +45,9 @@ RUN apt-get update && apt-get install -yq \
 RUN locale-gen en_US.UTF-8 en_GB.UTF-8 de_DE.UTF-8 es_ES.UTF-8 fr_FR.UTF-8 it_IT.UTF-8 km_KH sv_SE.UTF-8 fi_FI.UTF-8
 RUN a2enmod rewrite expires
 # Configure PHP
-#ADD typo3.php.ini /etc/php/7.0/apache2/conf.d/
+#ADD php.ini /etc/php/7.0/apache2/conf.d/
 # Configure vhost
-#ADD typo3.default.conf /etc/apache2/sites-enabled/000-default.conf
+#ADD default.conf /etc/apache2/sites-enabled/000-default.conf
 
 EXPOSE 80 443
 WORKDIR /var/www/html
